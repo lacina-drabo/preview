@@ -1543,6 +1543,21 @@ header.main-header .header-sticky.active{
 }
 
 
+
+@media screen and (max-width: 768px) {
+    .service-item {
+        padding: 15px;
+    }
+    .section-title h2 {
+        font-size: 18px;
+        line-height: 1.4em;
+        margin-bottom: 25px;
+    }
+
+	.service-content{
+	transform: translateY(10px);
+}
+}
 /************************************/
 /*** 	 08. Our Commitment css	  ***/
 /************************************/
