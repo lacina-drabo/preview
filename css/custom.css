@@ -380,7 +380,6 @@ body{
 .bg-section{
 	width: 100%;
 	margin: 0 auto;
-	border-radius: 40px;
 	background-color: #EB6A2D;
 }
 
@@ -5151,8 +5150,8 @@ header.main-header .header-sticky.active{
 	.bg-section{
 		width: calc(100% - 40px);
 		max-width: 100%;
-		border-radius: 30px;
 	}
+	
 	
 	.topbar .container-fluid,
 	header.main-header .container-fluid,
