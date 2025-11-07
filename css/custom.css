@@ -2642,6 +2642,14 @@ header.main-header .header-sticky.active{
 .testimonial-slider .swiper-slide.swiper-slide-active .testimonial-item .testimonial-quote img {
     filter: brightness(0) invert(1);
 }
+
+    @media screen and (max-width: 576px) {
+		.our-testimonials .section-title h2{
+			text-align: center;
+		}
+    
+}
+
 /************************************/
 /***       16.  Our FAQs css      ***/
 /************************************/
