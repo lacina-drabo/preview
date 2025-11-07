@@ -1543,11 +1543,52 @@ header.main-header .header-sticky.active{
 }
 
 
-
 @media screen and (max-width: 768px) {
+    .service-item {
+        padding: 20px; /* Réduit le padding intérieur */
+        margin-bottom: 10px; /* Réduit l'espace entre les boîtes */
+    }
+
+    .service-content-info h3 {
+        font-size: 15px;
+    }
+
+    .service-content-info p {
+        font-size: 14px;
+    }
+
+    .service-body .icon-box img {
+        max-width: 35px;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
     .service-item {
         padding: 15px;
     }
+
+    /* Force deux colonnes sur extra small */
+    .service-item-list .col-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+
+    /* Gérer les marges horizontales entre colonnes */
+    .service-item-list .col-6:nth-child(odd) {
+        padding-right: 7px;
+    }
+
+    .service-item-list .col-6:nth-child(even) {
+        padding-left: 7px;
+    }
+
+    /* Espacement général pour la section */
+    .our-services {
+        padding: 40px 10px;
+    }
+
     .section-title h2 {
         font-size: 18px;
         line-height: 1.4em;
@@ -1555,7 +1596,7 @@ header.main-header .header-sticky.active{
     }
 
 	.service-content{
-	transform: translateY(5px);
+	transform: translateY(10px);
 }
 }
 /************************************/
