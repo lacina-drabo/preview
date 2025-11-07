@@ -1567,28 +1567,6 @@ header.main-header .header-sticky.active{
     .service-item {
         padding: 15px;
     }
-
-    /* Force deux colonnes sur extra small */
-    .service-item-list .col-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-
-
-    /* Gérer les marges horizontales entre colonnes */
-    .service-item-list .col-6:nth-child(odd) {
-        padding-right: 7px;
-    }
-
-    .service-item-list .col-6:nth-child(even) {
-        padding-left: 7px;
-    }
-
-    /* Espacement général pour la section */
-    .our-services {
-        padding: 40px 10px;
-    }
-
     .section-title h2 {
         font-size: 18px;
         line-height: 1.4em;
