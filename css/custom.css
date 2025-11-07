@@ -1576,7 +1576,7 @@ header.main-header .header-sticky.active{
 }
 
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 476px) {
     .service-item {
         padding: 15px;
     }
