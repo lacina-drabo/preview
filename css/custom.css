@@ -1555,7 +1555,7 @@ header.main-header .header-sticky.active{
     }
 
 	.service-content{
-	transform: translateY(10px);
+	transform: translateY(5px);
 }
 }
 /************************************/
