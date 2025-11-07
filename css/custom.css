@@ -380,7 +380,7 @@ body{
 .bg-section{
 	width: 100%;
 	margin: 0 auto;
-	background-color: #EB6A2D;
+	background-color: #fff;
 }
 
 .section-row{
@@ -1383,7 +1383,7 @@ header.main-header .header-sticky.active{
 
 .service-item{
 	position: relative;
-	background: #fff;
+	background: #E9E7DD;
 	border: 1px solid var(--divider-color);
 	height: calc(100% - 30px);
 	margin-bottom: 30px;
@@ -1399,7 +1399,7 @@ header.main-header .header-sticky.active{
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: #fff;
+	background: #E9E7DD;
 	border-radius: 20px;
 	width: 100%;
 	height: 100%;
@@ -1541,6 +1541,19 @@ header.main-header .header-sticky.active{
 .section-footer-text p a:hover{
 	color: var(--primary-color);
 }
+
+.service-body {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* centre horizontalement */
+    
+    text-align: center;  /* aligne le texte au centre */
+    height: 100%;
+}
+
+
 
 
 @media screen and (max-width: 768px) {
