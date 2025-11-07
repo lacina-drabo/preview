@@ -1548,7 +1548,6 @@ header.main-header .header-sticky.active{
     display: flex;
     flex-direction: column;
     align-items: center;  /* centre horizontalement */
-    
     text-align: center;  /* aligne le texte au centre */
     height: 100%;
 }
@@ -1576,7 +1575,7 @@ header.main-header .header-sticky.active{
 }
 
 
-@media screen and (max-width: 476px) {
+@media screen and (max-width: 576px) {
     .service-item {
         padding: 15px;
     }
@@ -2626,6 +2625,23 @@ header.main-header .header-sticky.active{
 	width: 14px;
 }
 
+/* Met le texte en blanc uniquement pour le slide actif */
+.testimonial-slider .swiper-slide.swiper-slide-active .testimonial-item .testimonial-content h3,
+.testimonial-slider .swiper-slide.swiper-slide-active .testimonial-item .testimonial-content p,
+.testimonial-slider .swiper-slide.swiper-slide-active .testimonial-item .author-content h3,
+.testimonial-slider .swiper-slide.swiper-slide-active .testimonial-item .author-content p {
+    color: #fff !important;
+}
+
+/* Optionnel : changer aussi la couleur du trait de séparation */
+.testimonial-slider .swiper-slide.swiper-slide-active .testimonial-item .testimonial-header {
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Si tu veux aussi que la citation change de couleur */
+.testimonial-slider .swiper-slide.swiper-slide-active .testimonial-item .testimonial-quote img {
+    filter: brightness(0) invert(1);
+}
 /************************************/
 /***       16.  Our FAQs css      ***/
 /************************************/
