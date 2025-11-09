@@ -125,6 +125,19 @@ h2{
 	font-family: 'Playfair Display', serif;
 }
 
+.subtitle{
+	font-family: 'Lora', serif;
+	font-size: 16px;
+	color: #C76D47;
+	padding-top: 40px;
+}
+
+.fertility-content .title{
+	font-family: 'Playfair Display', serif;
+	font-size: 30px;
+	color: #1A4946;
+}
+
 figure{
 	margin: 0;
 }
@@ -1816,100 +1829,185 @@ header.main-header .header-sticky.active{
 /************************************/
 /*** 	 10. Why Choose Us css	  ***/
 /************************************/
-
-.why-choose-us{
-	padding: 100px 0;
+/* --- SECTION GÉNÉRALE (Fond et Contraste) --- */
+.notebook-section {
+    background-color: #07092c; /* Bleu foncé */
+    padding: 100px 0;
+    color: var(--white-color); 
 }
 
-.why-choose-list{
-	display: flex;
-	flex-wrap: wrap;
-	gap: 30px;
+.notebook-description {
+    max-width: 850px;
+    margin: 0 auto 80px auto; /* Marge supérieure pour l'espace */
+    font-size: 18px;
 }
 
-.why-choose-box{
-	width: calc(33.33% - 20px);
-	display: flex;
-	flex-wrap: wrap;
-	gap: 30px;
+/* --- CONTENU PRINCIPAL (Points Clés et Images) --- */
+.notebook-content-v2 {
+    margin-bottom: 30px; /* Espace avant les nouveaux paragraphes */
 }
 
-.why-choose-box:nth-child(3n + 2){
-	flex-direction: column-reverse;
+/* Listes de points (alignement au centre vertical) */
+.left-features .features-list-wrapper {
+    text-align: right;
+    padding-right: 20px;
 }
 
-.why-choose-image,
-.why-choose-item{
-	width: 100%;
+.right-features .features-list-wrapper {
+    text-align: left;
+    padding-left: 20px;
 }
 
-.why-choose-image figure{
-	display: block;
-	border-radius: 20px;
+/* --- BLOC CENTRAL : Images --- */
+.central-devices-wrapper {
+    width: 100%;
+    /* Utilise l'espace pour aligner les éléments à l'intérieur */
+    gap: 0; /* Supprime le gap par défaut si Flexbox est actif */
 }
 
-.why-choose-image img{
-	width: 100%;
-	aspect-ratio: 1 / 0.944;
-	object-fit: cover;
-	border-radius: 20px;
+.version-item {
+    width: 40%; /* Assure que les blocs prennent une partie égale de l'espace */
 }
 
-.why-choose-item{
-	background-color: var(--secondary-color);
-	border-radius: 20px;
-	padding: 40px;
+/* Augmentation de la taille des images et standardisation */
+.device-images-with-plus .device-img {
+    max-height: 450px; /* Taille standardisée et mise en avant */
+    width: auto;
+    max-width: 250px; 
+    display: block;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); 
+    /* Retire la transition sur les images pour la démo */
 }
 
-.why-choose-box:nth-child(3n + 2) .why-choose-item{
-	background-color: var(--accent-color);
+.digital-figure .device-img {
+    max-width: 250px; 
 }
 
-.why-choose-box:nth-child(3n + 3) .why-choose-item{
-	background-color: var(--primary-color);
+/* Signe Plus Central entre les images */
+.central-plus-sign {
+    font-size: 80px; 
+    font-weight: 100; 
+    color: var(--white-color);
+    line-height: 1; 
+    width: 20%; /* Espace pour le + */
+    align-self: flex-end; /* Aligner le bas du + avec le bas des images */
+    padding-bottom: 200px; /* Ajuster pour centrer le + verticalement */
+    text-align: center;
 }
 
-.why-choose-item h2{
-	font-size: 48px;
-	margin-bottom: 20px;
+/* --- NOUVEAUX PARAGRAPHES DESCRIPTIFS (Alignement sous les images) --- */
+.comparison-description-row {
+    margin-top: 30px; /* Espace après la rangée principale */
 }
 
-.why-choose-item h3{
-	font-size: 20px;
-	margin-bottom: 20px;
+.comparison-description-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 350px; /* Limiter la largeur du texte pour correspondre à la largeur de l'image */
+    padding: 0 15px;
 }
 
-.why-choose-item p{
-	margin-bottom: 0;
+/* Alignement sous le téléphone (aligné à droite) */
+.digital-description-col {
+    display: flex;
+    justify-content: flex-end;
 }
 
-.why-choose-box:nth-child(3n + 2) .why-choose-item h2, 
-.why-choose-box:nth-child(3n + 3) .why-choose-item h2,
-.why-choose-box:nth-child(3n + 2) .why-choose-item h3,
-.why-choose-box:nth-child(3n + 3) .why-choose-item h3,
-.why-choose-box:nth-child(3n + 2) .why-choose-item p,
-.why-choose-box:nth-child(3n + 3) .why-choose-item p{
-	color: var(--white-color);
+/* Alignement sous le carnet (aligné à gauche) */
+.paper-description-col {
+    display: flex;
+    justify-content: flex-start;
 }
 
-.why-choose-btn{
-	margin-top: 30px;
-}
 
-.why-choose-btn .btn-default{
-	width: 100%;
-	text-align: center;
-	padding: 17px;
-}
+/* --- MISE EN PAGE MOBILE (Tous Écrans < 992px) --- */
+@media (max-width: 991px) {
+    /* Cache l'ancienne structure de paragraphe sur mobile pour éviter la duplication */
+    .comparison-description-row {
+        display: none; 
+    }
 
-.why-choose-btn .btn-default::before{
-	display: none;
-}
+    .notebook-content-v2 {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
 
-.why-choose-box:nth-child(3n + 2) .why-choose-item .why-choose-btn .btn-default{
-	background: var(--primary-color);
-}
+    .center-version-display {
+        order: 1;
+        width: 100%;
+        margin-bottom: 30px;
+        min-height: auto;
+    }
+    .left-features { order: 2; }
+    .right-features { order: 3; }
 
+    /* Réintégration de la structure mobile demandée (Titre + Paragraphe + Image) */
+    
+    .version-item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .digital-item, .paper-item {
+        /* Permet d'empiler le titre et l'image */
+        flex-direction: column;
+    }
+
+    .central-plus-sign {
+        display: none; /* Cache le "+" central en mobile */
+    }
+
+    /* Le texte descriptif vient se placer sous l'image sur mobile */
+    .comparison-description-text {
+        text-align: center;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Sur mobile, nous affichons le texte descriptif du carnet à la suite des points clés */
+    
+    /* Le bloc feature est remplacé par la structure complète pour la version digitale */
+    .left-features {
+        display: none !important;
+    }
+    /* Le bloc feature de droite est remplacé par la structure complète pour la version papier */
+    .right-features {
+        display: none !important;
+    }
+
+    /* Nouvelle organisation du bloc central sur mobile pour afficher les éléments dans l'ordre: */
+    
+    .central-devices-wrapper {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .digital-item, .paper-item {
+        margin-bottom: 40px;
+    }
+    
+    .digital-item::after {
+        content: "pratique et légère, elle vous accompagne partout sur votre téléphone pour garder toutes les informations essentielles à portée de main.";
+        display: block;
+        font-size: 16px;
+        line-height: 1.6;
+        font-style: italic;
+        margin-top: 20px;
+        padding: 0 15px;
+    }
+    
+    .paper-item::after {
+        content: "un carnet à feuilleter, annoter et conserver, pour revivre votre voyage et en garder un souvenir unique.";
+        display: block;
+        font-size: 16px;
+        line-height: 1.6;
+        font-style: italic;
+        margin-top: 20px;
+        padding: 0 15px;
+    }
+    
+}
 /************************************/
 /*** 	   11. Our Facts css	  ***/
 /************************************/
@@ -2693,7 +2791,7 @@ header.main-header .header-sticky.active{
 }
 
 .faq-accordion .accordion-item{
-	background: var(--white-color);
+	background: #fff;
     border: 1px solid var(--divider-color);
 	border-radius: 10px;
 	margin-bottom: 30px;
@@ -2706,17 +2804,18 @@ header.main-header .header-sticky.active{
 }
 
 .faq-accordion .accordion-header .accordion-button{
-	font-size: 18px;
+	font-size: 15px;
 	font-weight: 600;
 	line-height: 1.111em;
-	background: var(--accent-color);
+	background: #1A4946;
 	color: var(--white-color);
 	padding: 20px 45px 20px 20px;
 	transition: all 0.3s ease-in-out;
+	font-family: hero;
 }
 
 .faq-accordion .accordion-header .accordion-button.collapsed{
-	color: var(--primary-color);
+	color: #1A4946;
 	background: transparent;
 }
 
@@ -2741,7 +2840,7 @@ header.main-header .header-sticky.active{
 }
 
 .faq-accordion .accordion-item .accordion-body{
-	background: var(--accent-color);
+	background: #1A4946;
 	border-top: 1px solid var(--divider-color);
 	padding: 20px;
 }
@@ -4388,6 +4487,7 @@ header.main-header .header-sticky.active{
 
 .case-study-entry{
     margin-bottom: 60px;
+	margin-top: 60px;
 }
 
 .case-study-entry p{
@@ -4435,11 +4535,6 @@ header.main-header .header-sticky.active{
     color: var(--accent-color);
 }
 
-.case-study-success-box,
-.case-study-fertility-box,
-.case-study-guide-box{
-	margin-top: 60px;
-}
 
 .case-study-success-list{
 	display: flex;
@@ -4600,6 +4695,19 @@ header.main-header .header-sticky.active{
 	font-size: 20px;
 	line-height: 1.4em;
 }
+
+.accordion-button .accordion-icon {
+    width: 18px;
+    height: auto;
+    margin-right: 12px;
+    transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) .accordion-icon {
+    transform: rotateY(180deg);
+    filter: brightness(0) invert(0);
+}
+
 
 /************************************/
 /*** 	 27.  Team Page css		  ***/
